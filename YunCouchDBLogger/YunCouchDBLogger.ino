@@ -56,7 +56,6 @@ String reqUUID(){
 //PUT new document onto the DB
 void callDB(String UUID, String JSON){
     Process solarDB;
-    requestState = 0;
     solarDB.runShellCommand("curl -X PUT " + CouchIP + "/solar/"+ UUID+ " -d  \'"+ JSON +"\'");  
     while (solarDB.available() > 0) {
       char c = solarDB.read();
