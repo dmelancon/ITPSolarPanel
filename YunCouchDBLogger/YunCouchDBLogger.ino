@@ -1,11 +1,10 @@
 #include <Process.h>
 #include <Wire.h>
-String CouchIP = "http://128.122.6.165:5984";   //change this to the couchDB IP+port
+String CouchIP = "http://104.131.56.21:5984";   //change this to the couchDB IP+port
 String newJSON, newUUID;
 
 void setup() {
   Serial.begin(9600);  // initialize serial communication
-  while (!Serial);     // do nothing until the serial monitor is opened
   Serial.println("Starting bridge...\n");
   Bridge.begin();  // make contact with the linux processor
   Wire.begin(2);
