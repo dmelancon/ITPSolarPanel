@@ -1,4 +1,4 @@
-#include <SimpleTimer.h>
+x#include <SimpleTimer.h>
 #include <ModbusMaster.h>
 #include "triStarHeader.h"
 #include "InfoHeader.h"
@@ -18,7 +18,7 @@ const unsigned long postingInterval = 10*1000;  // delay between updates to Pach
 
 boolean timeToSend = false;
 // the timer object
-SimpleTimer timer;
+SimpleTimer timer;9
 
 // a function to be executed periodically
 void repeatMe() {
