@@ -1,9 +1,9 @@
-import csv,threading
+import csv
 from datetime import datetime
 
 # Writes current system datetime to CSV file every minute
 # Year, Month, Day, Hour, Minute, Second
-# Uses threading timer, will execute every 60 seconds
+# Running once per minute on cron, check "crontab -l" to confirm
 
 def writeDate():
 	fname = '/mnt/sda1/date.csv'
@@ -13,8 +13,6 @@ def writeDate():
 		writer = csv.writer(f)
 		writer.writerow(today)
 		print "Current date & time is : ", today
-
-	threading.Timer(60.0,writeDate).start()
 
 
 
