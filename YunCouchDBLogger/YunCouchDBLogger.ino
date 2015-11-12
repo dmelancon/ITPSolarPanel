@@ -8,7 +8,7 @@ void setup() {
   Serial.println("Starting bridge...\n");
   Bridge.begin();  // make contact with the linux processor
   Process dateWriter;
-  dateWriter.runShellCommand("python /mnt/sda1/dateWriter.py &");
+  dateWriter.runShellCommand("python /mnt/sda1/dateOnLoad.py");
   Wire.begin(2);
   Wire.onReceive(receiveEvent);
   delay(2000);  // wait 2 seconds
